@@ -1,3 +1,17 @@
+const MascotaOriginal = {
+    nombre: "Martin",
+    color: "Rojo",
+    tipo: "Zorro",
+};
+
+
+const lugar = document.getElementById("lugar");
+
+
+lugar.innerHTML = `Mi mascota es un ${MascotaOriginal.tipo} llamado ${MascotaOriginal.nombre} y es de color ${MascotaOriginal.color}.<br><br>`;
+
+
+
 class Acme {
     constructor(nombre, color, tipo) {
         this.nombre = nombre;
@@ -14,6 +28,5 @@ const Mascota1 = new Acme("Martin", "Rojo", "Zorro");
 const Mascota2 = new Acme("Luna", "Blanco", "Perro");
 const Mascota3 = new Acme("Michi", "Negro", "Gato");
 
-const lugar = document.getElementById("lugar");
 
-lugar.innerHTML = Mascota1.jugar() + "<br>" + Mascota2.jugar() + "<br>" + Mascota3.jugar();
+lugar.innerHTML += Mascota1.jugar() + "<br>" + Mascota2.jugar() + "<br>" + Mascota3.jugar();
